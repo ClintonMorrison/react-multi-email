@@ -8,6 +8,7 @@ export interface IReactMultiEmailProps {
     getLabel: (email: string, index: number, removeEmail: (index: number) => void) => void;
     className?: string;
     placeholder?: string | React.ReactNode;
+    inputId?: string;
 }
 export interface IReactMultiEmailState {
     focused?: boolean;

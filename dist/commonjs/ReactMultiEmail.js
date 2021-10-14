@@ -153,7 +153,7 @@ var ReactMultiEmail = /** @class */ (function (_super) {
     ReactMultiEmail.prototype.render = function () {
         var _this = this;
         var _a = this.state, focused = _a.focused, emails = _a.emails, inputValue = _a.inputValue;
-        var _b = this.props, style = _b.style, getLabel = _b.getLabel, _c = _b.className, className = _c === void 0 ? '' : _c, noClass = _b.noClass, placeholder = _b.placeholder;
+        var _b = this.props, style = _b.style, getLabel = _b.getLabel, _c = _b.className, className = _c === void 0 ? '' : _c, noClass = _b.noClass, placeholder = _b.placeholder, inputId = _b.inputId;
         // removeEmail
         return (React.createElement("div", { className: className + " " + (noClass ? '' : 'react-multi-email') + " " + (focused ? 'focused' : '') + " " + (inputValue === '' && emails.length === 0 ? 'empty' : ''), style: style, onClick: function () {
                 if (_this.emailInputRef.current) {
@@ -164,7 +164,7 @@ var ReactMultiEmail = /** @class */ (function (_super) {
             emails.map(function (email, index) {
                 return getLabel(email, index, _this.removeEmail);
             }),
-            React.createElement("input", { ref: this.emailInputRef, type: "text", value: inputValue, onFocus: this.handleOnFocus, onBlur: this.handleOnBlur, onChange: this.handleOnChange, onKeyDown: this.handleOnKeydown, onKeyUp: this.handleOnKeyup })));
+            React.createElement("input", { ref: this.emailInputRef, type: "text", id: inputId, value: inputValue, onFocus: this.handleOnFocus, onBlur: this.handleOnBlur, onChange: this.handleOnChange, onKeyDown: this.handleOnKeydown, onKeyUp: this.handleOnKeyup })));
     };
     return ReactMultiEmail;
 }(React.Component));
